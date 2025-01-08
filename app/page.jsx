@@ -1,3 +1,7 @@
+export const metadata = {
+  title: "Kaileb Hammontree"
+};
+
 export default function Home() {
   return (
     <div className="relative overflow-hidden bg-black">

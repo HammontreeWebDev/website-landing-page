@@ -18,6 +18,7 @@ const josefinSans = Josefin_Sans({
   preload: true,
   weight: ['400'],
 })
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
