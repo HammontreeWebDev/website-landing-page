@@ -56,8 +56,9 @@ export default function Home() {
         <main className="mx-auto mt-16 max-w-7xl px-4 sm:mt-24">
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-[var(--primary2)] sm:text-5xl md:text-6xl">
-              <span className="block xl:inline">Welcome To</span>{' '}
-              <span className="block text-[var(--primary1)] title-text xl:inline">Kaileb Hammontree</span>
+              <span className="block xl:inline">Web Developer</span>{' '}
+              <span className="block xl:inline text-white">|</span>{' '}
+              <span className="block text-[var(--primary1)] title-text xl:inline">Artist</span>
             </h1>
             <p className="mx-auto mt-3 max-w-md text-base text-white sm:text-lg md:mt-5 md:max-w-3xl md:text-xl">
               You've made it!
@@ -84,7 +85,7 @@ export default function Home() {
               <br></br>
               <br></br>
 
-              Click on one of the buttons below to continue exploring Kaileb's website.
+              Click on one of the buttons below to find out what Kaileb has to offer.
             </p>
             <div className="mx-auto mt-5 max-w-md sm:flex sm:justify-center md:mt-8">
               <div className="rounded-md shadow">
