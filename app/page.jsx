@@ -57,7 +57,7 @@ export default function Home() {
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-[var(--primary2)] sm:text-5xl md:text-6xl">
               <span className="block xl:inline">Web Developer</span>{' '}
-              <span className="block xl:inline text-white">|</span>{' '}
+              <span className="block xl:inline text-white"> - </span>{' '}
               <span className="block text-[var(--primary1)] title-text xl:inline">Artist</span>
             </h1>
             <p className="mx-auto mt-3 max-w-md text-base text-white sm:text-lg md:mt-5 md:max-w-3xl md:text-xl">
