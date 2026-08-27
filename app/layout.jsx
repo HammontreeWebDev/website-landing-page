@@ -1,42 +1,28 @@
-'use client';
-
 import "./globals.css";
-// test comment
-// import fonts from next/font/google to avoid making requests from google
-import { Architects_Daughter } from 'next/font/google';
-import { Josefin_Sans } from "next/font/google";
+import { Syne, DM_Sans } from "next/font/google";
 
-// store fonts in a variable and specify parameters
-const architectsDaughter = Architects_Daughter({
-  subsets: ['latin'],
-  preload: true,
-  weight: ['400'],
+const syne = Syne({
+  subsets: ["latin"],
+  variable: "--font-display",
+  weight: ["600", "700", "800"],
 });
 
-const josefinSans = Josefin_Sans({
-  subsets: ['latin'],
-  preload: true,
-  weight: ['400'],
-})
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  variable: "--font-body",
+  weight: ["400", "500", "600"],
+});
+
+export const metadata = {
+  title: "Kaileb Hammontree — Music & Full-Stack Development",
+  description:
+    "Choose your adventure: explore Kaileb Hammontree's music or Hammontree Full-Stack Solutions web & app development services.",
+};
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <style jsx global>
-        {
-          `
-                :root {
-                    --title-text: ${architectsDaughter.style.fontFamily};
-                    --body-text: ${josefinSans.style.fontFamily};
-                }
-                `
-        }
-      </style>
-      <body
-        className={`antialiased`}
-      >
-        {children}
-      </body>
+    <html lang="en" className={`${syne.variable} ${dmSans.variable}`}>
+      <body className="font-body antialiased">{children}</body>
     </html>
   );
 }
