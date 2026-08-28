@@ -1,42 +1,43 @@
-'use client';
-
 import "./globals.css";
-// test comment
-// import fonts from next/font/google to avoid making requests from google
-import { Architects_Daughter } from 'next/font/google';
-import { Josefin_Sans } from "next/font/google";
+import { Righteous, Nunito, Space_Grotesk, Inter } from "next/font/google";
 
-// store fonts in a variable and specify parameters
-const architectsDaughter = Architects_Daughter({
-  subsets: ['latin'],
-  preload: true,
-  weight: ['400'],
+const righteous = Righteous({
+  subsets: ["latin"],
+  variable: "--font-music-display",
+  weight: ["400"],
 });
 
-const josefinSans = Josefin_Sans({
-  subsets: ['latin'],
-  preload: true,
-  weight: ['400'],
-})
+const nunito = Nunito({
+  subsets: ["latin"],
+  variable: "--font-music-body",
+  weight: ["400", "600", "700"],
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-dev-display",
+  weight: ["500", "600", "700"],
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-dev-body",
+  weight: ["400", "500", "600"],
+});
+
+export const metadata = {
+  title: "Kaileb Hammontree — Music & Full-Stack Development",
+  description:
+    "Choose your path: explore Kaileb Hammontree's music or Hammontree Full-Stack Solutions premium web & app development.",
+};
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <style jsx global>
-        {
-          `
-                :root {
-                    --title-text: ${architectsDaughter.style.fontFamily};
-                    --body-text: ${josefinSans.style.fontFamily};
-                }
-                `
-        }
-      </style>
-      <body
-        className={`antialiased`}
-      >
-        {children}
-      </body>
+    <html
+      lang="en"
+      className={`${righteous.variable} ${nunito.variable} ${spaceGrotesk.variable} ${inter.variable}`}
+    >
+      <body className="antialiased">{children}</body>
     </html>
   );
 }
